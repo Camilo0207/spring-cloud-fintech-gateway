@@ -10,20 +10,16 @@ spring:
         locator:
           enabled: true
       default-filters:
-        - name: FilterCustom 
+        - name: FilterCustom
       routes:
-        #- id: mscourse #identificador de la ruta
-          - id: jsonplaceholder
-          #uri: lb://ms-course #URL donde se hará el redirect segun el predicado definido
-            uri: https://jsonplaceholder.typicode.com
-          predicates: #Reglas de analisis de request
-            - Path=/todos/** #path de url de request a considerar
-       # - id: mssubscription
-          - id: httpbin
-        #  uri: lb://ms-subscription
-            uri: https://httpbin.org
-         predicates:
-            - Path=/get/**              
+        - id: jsonplaceholder
+          uri: https://jsonplaceholder.typicode.com
+          predicates:
+            - Path=/todos/**
+        - id: httpbin
+          uri: https://httpbin.org
+          predicates:
+            - Path=/get/**
 
 info:
   app:
@@ -39,7 +35,7 @@ eureka:
     endpoint:
       gateway:
         enabled: true
-    endpoints: 
+    endpoints:
       web:
         exposure:
           include: gateway
