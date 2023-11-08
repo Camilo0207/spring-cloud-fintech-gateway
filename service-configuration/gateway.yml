@@ -10,8 +10,7 @@ spring:
         locator:
           enabled: true
       default-filters:
-        //- name: FilterCustom
-        -name: 
+        - name: FilterCustom 
       routes:
         //- id: mscourse #identificador de la ruta
           - id: jsonplaceholder
