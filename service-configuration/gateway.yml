@@ -12,15 +12,15 @@ spring:
       default-filters:
         - name: FilterCustom 
       routes:
-        //- id: mscourse #identificador de la ruta
+        #- id: mscourse #identificador de la ruta
           - id: jsonplaceholder
-          //uri: lb://ms-course #URL donde se hará el redirect segun el predicado definido
+          #uri: lb://ms-course #URL donde se hará el redirect segun el predicado definido
             uri: https://jsonplaceholder.typicode.com
           predicates: #Reglas de analisis de request
             - Path=/todos/** #path de url de request a considerar
-       // - id: mssubscription
+       # - id: mssubscription
           - id: httpbin
-        //  uri: lb://ms-subscription
+        #  uri: lb://ms-subscription
             uri: https://httpbin.org
          predicates:
             - Path=/get/**              
