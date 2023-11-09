@@ -20,6 +20,10 @@ spring:
           uri: https://httpbin.org
           predicates:
             - Path=/get/**
+        - id: ms-course
+          uri: https://localhost:${server.port}/
+          predicates:
+            - Path=/api/course/**
       globalcors:
         cors-configurations:
           '[/**]':
