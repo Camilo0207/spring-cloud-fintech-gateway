@@ -21,8 +21,10 @@ spring:
           predicates:
             - Path=/get/**
         - id: ms-course
+          uri: lb://ms-course
           predicates:
             - Path=/api/course/**
+
       globalcors:
         cors-configurations:
           '[/**]':
